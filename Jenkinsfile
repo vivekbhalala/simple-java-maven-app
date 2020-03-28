@@ -3,7 +3,7 @@ node {
                 def mvnHome = tool name: 'maven_3', type: 'maven'
                 sh "${mvnHome}/bin/mvn -B -DskipTests clean package"  
         }
-        stage('Test1') {
+        stage('Test') {
                 def mvnHome = tool name: 'maven_3', type: 'maven'
                 sh "${mvnHome}/bin/mvn test"
         }
