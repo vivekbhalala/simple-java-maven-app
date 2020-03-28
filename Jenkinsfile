@@ -1,8 +1,4 @@
-pipeline {
-    agent {
-       
-    }
-    stages {
+node {
         stage('Build') { 
             steps {
                 def mvnHome = tool name: 'maven_3', type: 'maven'
@@ -24,5 +20,4 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
-    }
 }
