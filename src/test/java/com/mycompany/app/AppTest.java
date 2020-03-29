@@ -20,25 +20,25 @@ public class AppTest
         System.setOut(new PrintStream(outContent));
     }
 
-    // @Test
-    // public void testAppConstructor() {
-    //     try {
-    //         new App();
-    //     } catch (Exception e) {
-    //         fail("Construction failed.");
-    //     }
-    // }
+    @Test
+    public void testAppConstructor() {
+        try {
+            new App();
+        } catch (Exception e) {
+            fail("Construction failed.");
+        }
+    }
 
-    // @Test
-    // public void testAppMain()
-    // {
-    //     App.main(null);
-    //     try {
-    //        assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
-    //     } catch (AssertionError e) {
-    //        fail("\"message\" is not \"Hello World!\"");
-    //     }
-    // }
+    @Test
+    public void testAppMain()
+    {
+        App.main(null);
+        try {
+           assertEquals("Hello World" + System.getProperty("line.separator"), outContent.toString());
+        } catch (AssertionError e) {
+           fail("\"message\" is not \"Hello World!\"");
+        }
+    }
 
     @After
     public void cleanUpStreams() {
